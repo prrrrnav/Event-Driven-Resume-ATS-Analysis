@@ -29,12 +29,16 @@ func (p *Producer) Publish(ctx context.Context, event interface{}) error{
 	if err!= nil {
 		return err
 	}
-
+	log.Println("Publishing event to Kafka...")
+	
 	msg:= kafka.Message{
 		Value: bytes,
 	}
 
+
+
 	if err:= p.writer.WriteMessages(ctx,msg); err != nil{
+		log.Printf("Kafka publish failed: %v\n", err)
 		return err
 	}
 

@@ -7,7 +7,7 @@ type ResumeUploadEvent struct {
 	EventType string `json:"event_type"`
 	Timestamp time.Time `json:"timestamp"`
 
-	jobID string `json:"job_id"`
+	JobID string `json:"job_id"`
 	UserID string `json:"user_id"`
 
 	Resume ResumeInfo `json:"resume"`
@@ -21,5 +21,5 @@ type ResumeInfo struct {
 }
 
 type JobDescription struct {
-	text string `json:"text"`
+	Text string `json:"text"`
 }
