@@ -1,0 +1,17 @@
+# Go
+*.exe
+*.test
+*.out
+bin/
+
+# Env files
+.env
+.env.*
+
+# Docker volumes / local data
+kafka-data/
+zookeeper-data/
+
+# OS
+.DS_Store
+Thumbs.db
